@@ -161,6 +161,7 @@ button:active {
 
 .NotFound h3 {
      position: absolute;
+     top: 60%;
      bottom: 28%;
      right: 30%;
 
