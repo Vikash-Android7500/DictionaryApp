@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Dictionary app</title>
+     <link rel="shortcut icon" href="./images/fav.png" type="image/x-icon">
+     <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+     <main class="Wrapper">
+          <div id="snackbar"></div>
+          <section class="Contaner">
+               <nav class="NavBar">
+                    <h1>Dictionary app</h1>
+               </nav>
+
+               <article class="MainSection">
+                    <h2>Find any word exist in the word 😄</h2>
+                    <div class="FormWrap">
+                         <div class="InputWrap">
+                              <input type="text" id="input" placeholder="Type a word" reset="reset">
+                              <button class="btn">Search</button>
+                         </div>
+                    </div>
+
+                    <div class="ApiDataContainer">
+                         <span class="Loading"></span>
+                         <p class="Def"></p>
+                         <div class="Audio"></div>
+                         <div class="NotFound"></div>
+                    </div>
+               </article>
+          </section>
+     </main>
+
+
+     <!-- js file linked -->
+     <script src="./app.js"></script>
+</body>
+
+</html>

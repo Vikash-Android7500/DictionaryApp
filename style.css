@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+     margin: 0%;
+     padding: 0%;
+     box-sizing: border-box;
+     font-family: "Roboto", serif;
+}
+
+:root {
+     --header-color: #B39DDB;
+     --headerText-color: #000000;
+     --Text-color: #fff;
+     --HeadingText-color: #263238;
+     --MainText-color: #212121;
+     --Loading-color: #1fb6ff;
+     --InputFocus-color: #ff6b6b;
+     --InputFocusShado-color: rgba(255, 107, 107, 0.8);
+     --Button-color: #ff6b6b;
+     --ButtonHover-color: #ff4757;
+}
+
+
+.Wrapper {
+     width: 100%;
+}
+
+
+.Contaner {
+     overflow-x: hidden;
+     padding: 8px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 16px;
+}
+
+.NavBar {
+     width: 100%;
+     height: 64px;
+     padding: 20px;
+     background-color: var(--header-color);
+     color: var(--headerText-color);
+     border-radius: 4px;
+}
+
+.MainSection {
+     max-width: 768px;
+     margin-bottom: 8px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 32px;
+}
+
+.MainSection h2 {
+     font-weight: 600;
+     font-size: 1.1rem;
+     color: var(--HeadingText-color);
+}
+
+.FormWrap {
+     padding: 64px;
+     background-color: var(--header-color);
+     border-radius: 4px;
+     box-shadow: 3px 2px 1px var(--Button-color);
+}
+
+.InputWrap {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 4px;
+}
+
+input {
+     padding: 10px;
+     width: 200px;
+     min-height: auto;
+     border: 1px solid rgba(255, 255, 255, 0.6);
+     border-radius: 4px;
+     outline: none;
+     font-size: 16px;
+     color: var(--MainText-color);
+     background: rgba(255, 255, 255, 0.8);
+     transition: 0.3s ease-in-out;
+}
+
+input:focus {
+     background: var(--Text-color);
+     border-color: var(--InputFocus-color);
+     box-shadow: 0 0 8px var(--InputFocus-color);
+}
+
+button {
+     padding: 10px 15px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 16px;
+     background: var(--Button-color);
+     color: var(--Text-color);
+     transition: 0.3s;
+}
+
+button:hover {
+     background: var(--ButtonHover-color);
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+     background-color: var(--InputFocus-color);
+}
+
+.ApiDataContainer {
+     padding-left: 64px;
+     padding-right: 64px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 32px;
+}
+
+.Loading {
+     display: none;
+     width: 1.50rem;
+     height: 1.50rem;
+     border: 11.2px var(--Loading-color);
+     border-left-style: solid;
+     border-radius: 50%;
+     animation: spinner-aib1d7 0.75s infinite linear;
+
+}
+
+@keyframes spinner-aib1d7 {
+     to {
+          transform: rotate(1turn);
+     }
+}
+
+.Def {
+     padding: 4px;
+     font-weight: 600;
+     letter-spacing: 0.1rem;
+     word-spacing: 0.1px;
+     color: var(--MainText-color);
+
+}
+
+.NotFound {
+     display: grid;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 16px;
+     color: var(--ButtonHover-color);
+}
+
+.NotFound h3 {
+     position: absolute;
+     bottom: 28%;
+     right: 30%;
+
+}
+
+
+.suggnetion {
+     padding: 2px 10px;
+     border-radius: 4px;
+     color: var(--headerText-color);
+     background-color: var(--header-color);
+     text-align: center;
+
+}
+
+.audio {
+     display: grid;
+     align-items: center;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 16px;
+     text-align: center;
+}
+
+
+/* show Toast Notification */
+#snackbar {
+     visibility: hidden;
+     min-width: 125px;
+     margin-left: -125px;
+     text-align: center;
+     font-size: 0.9rem;
+     font-weight: bold;
+     border-radius: 8px;
+     padding: 16px;
+     position: absolute;
+     left: 70%;
+     bottom: 30px;
+     border-bottom: 5px solid var(--Button-color);
+     color: var(--MainText-color);
+     background-color: var(--header-color);
+     z-index: 1;
+}
+
+#snackbar.show {
+     visibility: visible;
+     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+     animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+     from {
+          bottom: 0;
+          opacity: 0;
+     }
+
+     to {
+          bottom: 30px;
+          opacity: 1;
+     }
+}
+
+@keyframes fadein {
+     from {
+          bottom: 0;
+          opacity: 0;
+     }
+
+     to {
+          bottom: 30px;
+          opacity: 1;
+     }
+}
+
+@-webkit-keyframes fadeout {
+     from {
+          bottom: 30px;
+          opacity: 1;
+     }
+
+     to {
+          bottom: 0;
+          opacity: 0;
+     }
+}
+
+@keyframes fadeout {
+     from {
+          bottom: 30px;
+          opacity: 1;
+     }
+
+     to {
+          bottom: 0;
+          opacity: 0;
+     }
+}
+
+
+
+/* @media */
+@media only screen and (min-width: 630px) {
+     .MainSection h2 {
+          font-size: 2rem;
+     }
+
+     #snackbar {
+          position: absolute;
+          left: 50%;
+          bottom: 30px;
+          min-width: 250px;
+          padding: 8px;
+          font-size: 1rem;
+
+     }
+
+     .NotFound {
+          grid-template-columns: repeat(4, 1fr);
+     }
+
+          .NotFound h3 {
+               position: absolute;
+               bottom: 35%;
+               right: 45%;
+     
+          }
+}
