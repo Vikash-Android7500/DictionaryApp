@@ -159,13 +159,13 @@ button:active {
      color: var(--ButtonHover-color);
 }
 
-.NotFound h3 {
+/* .NotFound h3 {
      position: absolute;
      top: 40%;
      bottom: 28%;
      right: 30%;
 
-}
+} */
 
 
 .suggnetion {
