@@ -282,10 +282,10 @@ button:active {
           grid-template-columns: repeat(4, 1fr);
      }
 
-          .NotFound h3 {
+          /* .NotFound h3 {
                position: absolute;
                bottom: 35%;
                right: 45%;
      
-          }
+          } */
 }
